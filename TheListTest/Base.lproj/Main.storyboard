@@ -1,24 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SCj-yT-uQc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home-->
+        <scene sceneID="RPE-Uc-vkO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="b3P-j9-Dbj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vqX-jg-ItD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="PXJ-vj-gwA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="DfE-Ks-lOH"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvw-xx-lIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-846" y="-445"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="awM-pU-qpa">
+            <objects>
+                <viewController id="1M2-cn-pvh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VoN-K4-LPE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTV-fm-dja">
+                                <rect key="frame" x="151.5" y="417" width="111" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wcm-T7-ivL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PTV-fm-dja" firstAttribute="centerX" secondItem="Wcm-T7-ivL" secondAttribute="centerX" id="VrS-Jh-aXV"/>
+                            <constraint firstItem="PTV-fm-dja" firstAttribute="centerY" secondItem="Wcm-T7-ivL" secondAttribute="centerY" id="ocr-E5-X22"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="v9j-V0-zPQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLK-oV-rbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="-445"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="F4d-DD-N7u">
+            <objects>
+                <tabBarController interfaceStyle="dark" id="SCj-yT-uQc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qi5-8l-zkW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="b3P-j9-Dbj" kind="relationship" relationship="viewControllers" id="2vS-Pz-fpU"/>
+                        <segue destination="1M2-cn-pvh" kind="relationship" relationship="viewControllers" id="Rhg-QE-99x"/>
+                        <segue destination="eXM-G6-XjY" kind="relationship" relationship="viewControllers" id="wH1-FW-vSg"/>
+                        <segue destination="ZOa-Kj-hgm" kind="relationship" relationship="viewControllers" id="H2M-ml-YW3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3C-Dr-c0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1787" y="92"/>
+        </scene>
+        <!--Reservations-->
+        <scene sceneID="7wA-Ad-u10">
+            <objects>
+                <viewController id="eXM-G6-XjY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krB-fX-EhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd8-5n-3so">
+                                <rect key="frame" x="152.5" y="417" width="109" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7do-e1-48Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xd8-5n-3so" firstAttribute="centerY" secondItem="7do-e1-48Z" secondAttribute="centerY" id="QN0-5p-gy7"/>
+                            <constraint firstItem="Xd8-5n-3so" firstAttribute="centerX" secondItem="7do-e1-48Z" secondAttribute="centerX" id="WEi-pP-Whz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reservations" image="list.bullet.below.rectangle" catalog="system" id="8pF-so-Uyv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jda-1G-3vZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-864" y="245"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="PS3-7V-n6c">
+            <objects>
+                <viewController id="ZOa-Kj-hgm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fd6-38-AYO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsH-m5-gfF">
+                                <rect key="frame" x="180" y="417" width="54" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZlQ-KG-Vxc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YsH-m5-gfF" firstAttribute="centerX" secondItem="ZlQ-KG-Vxc" secondAttribute="centerX" id="Kaa-mA-aNB"/>
+                            <constraint firstItem="YsH-m5-gfF" firstAttribute="centerY" secondItem="ZlQ-KG-Vxc" secondAttribute="centerY" id="gPn-IG-TRC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="j5q-Tx-7bX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYX-3Y-Eyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="244"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.68627450980392157" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
