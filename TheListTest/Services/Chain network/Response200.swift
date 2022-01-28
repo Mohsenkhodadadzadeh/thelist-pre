@@ -11,8 +11,12 @@ class Response200: NetworkChainProtocol {
     func calculate<T: Codable>(_ unserilized: Data, status: Int) throws -> T {
 
         if status == 200 {
-            let retObj = try! JSONDecoder().decode(T.self, from: unserilized)
+            do {
+            let retObj = try JSONDecoder().decode(T.self, from: unserilized)
             return retObj
+            } catch {
+                throw(NetworkErrors.convertToModelError(data: String(data: unserilized, encoding: .utf8)))
+            }
         } else {
             if next != nil {
                 return try next!.calculate(unserilized, status: status)

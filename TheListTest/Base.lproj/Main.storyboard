@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--HomeVC-->
         <scene sceneID="RPE-Uc-vkO">
             <objects>
                 <viewController id="b3P-j9-Dbj" customClass="HomeVC" customModule="TheListTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,22 +18,129 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8k-3V-uHI">
-                                <rect key="frame" x="186" y="377" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAN-t5-VnW" customClass="GradientBackgroundView" customModule="TheListTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="635"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knF-LJ-A0X">
+                                <rect key="frame" x="10" y="93" width="126.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="PRG-dg-fii">
+                                <rect key="frame" x="213.5" y="97" width="190.5" height="26"/>
+                                <color key="pageIndicatorTintColor" name="homeCategoryTitle"/>
+                                <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-Hr-CNI">
+                                <rect key="frame" x="0.0" y="146.5" width="414" height="207"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pt6-Hr-CNI" secondAttribute="height" multiplier="2:1" id="3PP-6z-8Ne"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJu-X0-6kA">
+                                <rect key="frame" x="10" y="373.5" width="150.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Niu-DU-gIi">
+                                <rect key="frame" x="0.0" y="427" width="414" height="376"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vRA-IY-tK6">
+                                        <rect key="frame" x="32.5" y="0.0" width="349" height="188"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5C-wv-F0T" customClass="CustomHomeCategoryView" customModule="TheListTest" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="14" width="174.5" height="160"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="cJa-3H-M4a"/>
+                                                    <constraint firstAttribute="width" secondItem="M5C-wv-F0T" secondAttribute="height" multiplier="207:190" id="lob-27-NX2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l32-x5-UY2" customClass="CustomHomeCategoryView" customModule="TheListTest" customModuleProvider="target">
+                                                <rect key="frame" x="174.5" y="14" width="174.5" height="160"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="l32-x5-UY2" secondAttribute="height" multiplier="207:190" id="4de-FX-Q9A"/>
+                                                    <constraint firstAttribute="height" constant="160" id="VOf-6H-8VG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S6d-wj-r1E">
+                                        <rect key="frame" x="32.5" y="188" width="349" height="188"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-VV-CjI" customClass="CustomHomeCategoryView" customModule="TheListTest" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="14" width="174.5" height="160"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="aYu-df-l0j"/>
+                                                    <constraint firstAttribute="width" secondItem="HpK-VV-CjI" secondAttribute="height" multiplier="207:190" id="qfo-Y0-Ll3"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsh-qq-1Td" customClass="CustomHomeCategoryView" customModule="TheListTest" customModuleProvider="target">
+                                                <rect key="frame" x="174.5" y="14" width="174.5" height="160"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Gsh-qq-1Td" secondAttribute="height" multiplier="207:190" id="6xd-0S-PhA"/>
+                                                    <constraint firstAttribute="height" constant="160" id="KWD-DO-eUv"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PXJ-vj-gwA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PXJ-vj-gwA" firstAttribute="bottom" secondItem="RAN-t5-VnW" secondAttribute="bottom" constant="90" id="2qd-Ak-j3J"/>
+                            <constraint firstItem="RJu-X0-6kA" firstAttribute="leading" secondItem="PXJ-vj-gwA" secondAttribute="leading" constant="10" id="67j-23-NTD"/>
+                            <constraint firstItem="PXJ-vj-gwA" firstAttribute="leading" secondItem="Pt6-Hr-CNI" secondAttribute="leading" id="FBC-kT-u7s"/>
+                            <constraint firstItem="Pt6-Hr-CNI" firstAttribute="trailing" secondItem="PXJ-vj-gwA" secondAttribute="trailing" id="Nqn-sP-W0H"/>
+                            <constraint firstItem="PXJ-vj-gwA" firstAttribute="trailing" secondItem="Niu-DU-gIi" secondAttribute="trailing" id="Rlz-v7-iw2"/>
+                            <constraint firstItem="RAN-t5-VnW" firstAttribute="leading" secondItem="PXJ-vj-gwA" secondAttribute="leading" id="U85-io-9xZ"/>
+                            <constraint firstItem="knF-LJ-A0X" firstAttribute="leading" secondItem="PXJ-vj-gwA" secondAttribute="leading" constant="10" id="VCA-Jd-K24"/>
+                            <constraint firstItem="PXJ-vj-gwA" firstAttribute="trailing" secondItem="PRG-dg-fii" secondAttribute="trailing" constant="10" id="YT1-cW-JIy"/>
+                            <constraint firstItem="RAN-t5-VnW" firstAttribute="top" secondItem="PXJ-vj-gwA" secondAttribute="top" id="ZB3-e7-6ho"/>
+                            <constraint firstItem="Niu-DU-gIi" firstAttribute="top" secondItem="RJu-X0-6kA" secondAttribute="bottom" constant="20" id="cyT-F1-yMc"/>
+                            <constraint firstItem="PXJ-vj-gwA" firstAttribute="trailing" secondItem="RAN-t5-VnW" secondAttribute="trailing" id="hfe-Ta-NnC"/>
+                            <constraint firstItem="RJu-X0-6kA" firstAttribute="top" secondItem="Pt6-Hr-CNI" secondAttribute="bottom" constant="20" id="noq-Nw-Koc"/>
+                            <constraint firstItem="PXJ-vj-gwA" firstAttribute="bottom" secondItem="Niu-DU-gIi" secondAttribute="bottom" constant="10" id="pJQ-qA-m3n"/>
+                            <constraint firstItem="PRG-dg-fii" firstAttribute="centerY" secondItem="knF-LJ-A0X" secondAttribute="centerY" id="pKi-6d-dGX"/>
+                            <constraint firstItem="Pt6-Hr-CNI" firstAttribute="top" secondItem="knF-LJ-A0X" secondAttribute="bottom" constant="20" id="tVN-AV-ooq"/>
+                            <constraint firstItem="knF-LJ-A0X" firstAttribute="top" secondItem="PXJ-vj-gwA" secondAttribute="top" constant="5" id="u5j-46-c2f"/>
+                            <constraint firstItem="Niu-DU-gIi" firstAttribute="leading" secondItem="PXJ-vj-gwA" secondAttribute="leading" id="vAK-j2-qgq"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="DfE-Ks-lOH"/>
+                    <navigationItem key="navigationItem" id="iMg-Fb-ONm">
+                        <barButtonItem key="rightBarButtonItem" image="map" catalog="system" id="PT7-UH-0HK">
+                            <color key="tintColor" name="AccentColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barsResturantView" destination="M5C-wv-F0T" id="u5Y-tb-hDR"/>
+                        <outlet property="beachBarView" destination="Gsh-qq-1Td" id="pbu-Mh-6Yp"/>
+                        <outlet property="clubView" destination="HpK-VV-CjI" id="92l-Or-Hck"/>
+                        <outlet property="liveShowView" destination="l32-x5-UY2" id="fbc-KO-zsR"/>
+                        <outlet property="sliderContentView" destination="Pt6-Hr-CNI" id="vpo-NX-XOn"/>
+                        <outlet property="sliderPageControl" destination="PRG-dg-fii" id="dCt-yI-Jle"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvw-xx-lIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846" y="-445"/>
+            <point key="canvasLocation" x="63.768115942028992" y="-445.3125"/>
         </scene>
         <!--Explore-->
         <scene sceneID="awM-pU-qpa">
@@ -61,20 +168,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLK-oV-rbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="-445"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="-445.3125"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar-->
         <scene sceneID="F4d-DD-N7u">
             <objects>
-                <tabBarController interfaceStyle="dark" id="SCj-yT-uQc" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qi5-8l-zkW">
+                <tabBarController interfaceStyle="dark" id="SCj-yT-uQc" customClass="MainTabBar" customModule="TheListTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="placeholder" id="Qi5-8l-zkW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="tabBarColor"/>
                         <color key="tintColor" name="AccentColor"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="b3P-j9-Dbj" kind="relationship" relationship="viewControllers" id="2vS-Pz-fpU"/>
+                        <segue destination="qWH-HP-Dlv" kind="relationship" relationship="viewControllers" id="2vS-Pz-fpU"/>
                         <segue destination="1M2-cn-pvh" kind="relationship" relationship="viewControllers" id="Rhg-QE-99x"/>
                         <segue destination="eXM-G6-XjY" kind="relationship" relationship="viewControllers" id="wH1-FW-vSg"/>
                         <segue destination="ZOa-Kj-hgm" kind="relationship" relationship="viewControllers" id="H2M-ml-YW3"/>
@@ -140,14 +248,45 @@
             </objects>
             <point key="canvasLocation" x="90" y="244"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="4JE-Sq-zwE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qWH-HP-Dlv" customClass="HomeNC" customModule="TheListTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="DfE-Ks-lOH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gmr-JR-8cv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="navigation"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b3P-j9-Dbj" kind="relationship" relationship="rootViewController" id="th7-jg-R1W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JhI-zt-n5U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846.37681159420299" y="-445.3125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="placeholder" width="1200" height="900"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.68599998950958252" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="homeCategoryTitle">
+            <color red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navigation">
+            <color red="0.054901960784313725" green="0.054901960784313725" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarColor">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

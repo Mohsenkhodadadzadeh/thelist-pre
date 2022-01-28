@@ -1,13 +1,13 @@
 //
-//  MainTabBar.swift
+//  HomeNC.swift
 //  TheListTest
 //
-//  Created by Mohsen on 1/26/22.
+//  Created by Mohsen on 1/27/22.
 //
 
 import UIKit
 
-class MainTabBar: UITabBarController {
+class HomeNC: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,11 @@ class MainTabBar: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+    
+//    func position(for bar: UIBarPositioning) -> UIBarPosition
+//    {
+//        return .topAttached
+//    }
 
     /*
     // MARK: - Navigation

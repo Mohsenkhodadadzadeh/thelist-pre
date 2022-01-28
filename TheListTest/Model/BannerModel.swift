@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct BannerModel: Codable, Identifiable {
+struct BannerModel: Codable, Identifiable, Equatable {
     let id: Int
     let title: String
     let expensiveLevel: Int
-    private let imageAddressString: String
+    let imageAddressString: String
     var imageLink: URL? {
         URL(string: imageAddressString)
     }

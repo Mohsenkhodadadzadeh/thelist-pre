@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct BaseModel<T: Codable>: Codable {
+struct BaseModel<T: Codable & Equatable>: Codable, Equatable {
+   
     let status: Int
     let message: String
     let data: T

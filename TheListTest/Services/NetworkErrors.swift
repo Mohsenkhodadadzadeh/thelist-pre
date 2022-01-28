@@ -13,7 +13,7 @@ enum NetworkErrors: Error {
     case internalServerError
     case nilUrl
     case endOfChain
-    case convertToModelError(id: Int?)
+    case convertToModelError(data: String?)
     case unknownError(errorDescription: String?)
     
 }
@@ -30,7 +30,7 @@ extension NetworkErrors: LocalizedError {
             
         case .endOfChain: return "Undifined error"
         
-        case .convertToModelError(let id): return "convert data to model failed for \(id == nil ? " last object": "\(id!) object")"
+        case .convertToModelError(let data): return "convert data to model failed for \(data != nil ? data! : "")"
             
         case .unknownError(let errorDescription): return "new error was occured in line \(#line) , Network->\(#function): \(String(describing: errorDescription))"
             

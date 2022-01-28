@@ -55,4 +55,25 @@ class BannerRouter: AnyRouter {
         return router
     }
     
+    @discardableResult
+    static func start(_ view: AnyView) -> AnyRouter {
+        let router = BannerRouter()
+        
+        var _view: AnyView = view
+        var presenter: AnyPresenter = BannerPresenter()
+        var interactor: AnyInteractor = BannerInteractor()
+        
+        _view.presenter = presenter
+        
+        interactor.presenter = presenter
+        
+        presenter.router = router
+        presenter.view = _view
+        presenter.interactor = interactor
+        
+        router.view = view as? EntryPoint
+        
+        return router
+    }
+    
 }
