@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Glideshow",
+        "repositoryURL": "https://github.com/Mohsenkhodadadzadeh/Glideshow/",
+        "state": {
+          "branch": "myModify",
+          "revision": "8c114bdb92f7bddbcdda1c653bde862d4ee23482",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
