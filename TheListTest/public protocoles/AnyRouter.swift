@@ -11,7 +11,10 @@ import UIKit
 typealias EntryPoint = AnyView & UIViewController
 protocol AnyRouter {
     
-    var view: EntryPoint { get set }
+    var view: EntryPoint? { get set }
     static func start() -> AnyRouter
+    
+    @discardableResult
+    static func start(_ view: EntryPoint) -> AnyRouter
     
 }
