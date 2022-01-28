@@ -198,7 +198,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		820B167D27A19EF0001EF723 /* public protocoles */ = {
+		820B167D27A19EF0001EF723 /* public protocols */ = {
 			isa = PBXGroup;
 			children = (
 				820B167E27A19F1C001EF723 /* AnyRouter.swift */,
@@ -206,7 +206,7 @@
 				820B168227A19F9B001EF723 /* AnyInteractor.swift */,
 				820B168427A19FB8001EF723 /* AnyView.swift */,
 			);
-			path = "public protocoles";
+			path = "public protocols";
 			sourceTree = "<group>";
 		};
 		820B168627A1A9AC001EF723 /* Routers */ = {
@@ -349,7 +349,7 @@
 				820B168E27A1AD2A001EF723 /* Presenters */,
 				820B168927A1AA63001EF723 /* Model */,
 				820B168627A1A9AC001EF723 /* Routers */,
-				820B167D27A19EF0001EF723 /* public protocoles */,
+				820B167D27A19EF0001EF723 /* public protocols */,
 				820B167C27A17640001EF723 /* TheListTest.entitlements */,
 				82B196DA27A175F9003C932B /* AppDelegate.swift */,
 				82B196DC27A175F9003C932B /* SceneDelegate.swift */,
